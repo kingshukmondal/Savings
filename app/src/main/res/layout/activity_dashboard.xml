@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#2b313f"
+    tools:context=".dashboard">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_menu_24"
+            android:padding="@dimen/_5sdp"
+            app:tint="@color/white"
+            android:backgroundTint="#000000"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:text="Dashboard"
+            android:gravity="center_vertical"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_14sdp"/>
+    </LinearLayout>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginHorizontal="@dimen/_70sdp"
+        android:layout_height="@dimen/_200sdp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/round_corners"
+            android:paddingVertical="@dimen/_10sdp"
+            android:backgroundTint="#3a4153"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_online"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:text="45"
+                android:textColor="#FFDE03"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/_30sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Online"
+                android:textColor="#FFDE03"
+                android:textStyle="italic"
+                android:fontFamily="serif"
+                android:gravity="center"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:backgroundTint="#3a4153"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:background="@drawable/round_corners"
+            android:paddingVertical="@dimen/_10sdp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_offline"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:text="45"
+                android:textColor="#B00020"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/_30sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="CASH"
+                android:textColor="#B00020"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp" />
+
+
+</LinearLayout>
